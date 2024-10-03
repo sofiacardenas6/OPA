@@ -1,0 +1,149 @@
+Introduction
+Projet effectué dans le cadre de la formation Data
+Scientist de DataScientist.com
+Promotion novembre 2023
+Créatrice
+Sofía Cárdenas
+Faith Sholesi
+
+Un marché financier est un lieu où plusieurs acteurs se rencontrent
+(investisseurs et entreprises) pour échanger ou transférer leur 
+instruments financiers.
+(petite photo)
+
+Les entreprises mettent en vente leur instruments financiers (actions/
+obligations) afin de continuer à se developper pendant que les investiseurs 
+les rachettent pour ainsi faire du profit.
+(photo)
+
+Cepandant, cette manoeuvre n'est pas sans risque pour les actionnaires
+(crises financières de 2008/1929). (photo)
+Nous comprenons alors aisément l'importante d'investir dans des 
+instruments fiables et performants.
+
+.....................
+
+Comprendre les données
+Il est essentiel d'analyser tout d'abord nos données. 
+
+Pays 
+La majorité des entreprises font partie de l'Europe (Suède/France/Allemagne)
+
+
+Secteurs
+Les principaux secteurs sont: la technologie, la santé et l'industrie
+
+Industries 
+Les principales industries sont : la biotechnologie, les services immobiliers et
+les logiciels/applications
+
+Taille des entreprises
+La taille des entreprises a été classifiée comme ci-dessous:
+Très Petites Entreprises (TPE): Moins de 20 salariés
+Petites et Moyennes Entreprises (PME): Moins de 250 employés
+Entreprises de Taille Intermédiaire (ETI): Entre 250 et 4 999 salariés
+Grandes Entreprises (GE): Au moins 5000 salariés
+La plupart sont des entreprises de tailles intermédiaires 
+
+CA
+les secteurs les plus rentables sont ceux de l'énergie, des services financiers et 
+des biens de consommations cycliques.
+
+........................
+Time series
+Nous allons essayer d'analyser les performances journalières avec les times series.
+Les time series ou series temporelles correspondent à des données chronologiques où
+chaque valeur est lié à une date précise (par exemple annuelle/mensuelle ou journalière).
+Pour analyser les series temporelles, nous pouvons "décomposer la série". 
+La décomposer sépare la série en plusieurs composants:
+
+Saison originale
+Série d'origine
+
+Tendance 
+Orientation générale de la série, 
+l'évolution les données. 
+
+Saisonnalité 
+Variations périodiques de la série. Additive = valeurs constantes. 
+Multiplicative = valeurs qui augmentent au fil du temps. 
+
+Résidu
+Partie aléatoire de la série. 
+
+..........................
+
+Observations
+Nous récupérons les données suivantes pour les 10
+entreprises les plus performantes: 
+- Fermeture du cours boursier
+- Ouverture du cours boursier
+- Dividende du cours boursier 
+==> tout cela pour calculer le rendement journalier
+
+L'analyse des ces données fait ressortir plusieurs points:
+Des recherches externes font ressortir plusieurs points:
+
+Pour une analyse approfondie des données, nous pouvons effectuer
+une décomposition de la série
+
+text = ["""Return oscillant de -10 à 10%. 
+	Tendance qui chute en fin 2019 et en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+ 	"""Return oscillant de -20 à 15%. 
+	Tendance qui chute en fin 2019 et en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -10 à 18%. 
+	Tendance qui chute en fin 2019 et en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -12 à 14%. 
+	Tendance qui chute en fin 2019 et en début 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -20 à 45%. 
+	Tendance qui chute en fin 2019 et en début 2022.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -7 à 10%. 
+	Tendance qui chute en fin 2019 et en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -10 à 10%. 
+	Tendance qui chute en fin 2019 et en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -5 à 18%. 
+	Tendance qui est stable de 2018 à 2022 et qui chute en fin 2022.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+
+	"""Return oscillant de -10 à 28%. 
+	Tendance qui augmente de 2018 à 2021 et qui chute en début 2022.
+	6 périodes de 2018 à 2023.
+	Peu de résidu""",
+	
+	"""Return oscillant de -7 à 12%. 
+	Tendance qui augmente de 2018 à 2021 et qui chute en fin 2021.
+	6 périodes de 2018 à 2023.
+	Peu de résidu"""]
+
+..................................
+
+Modèle 
+Nous allons maintenant appliquer nos modèles de prédictions
+
+....................................
+BackTesting
+Le but est de savoir : est ce que notre modèle est plus
+interessant que le hasard ? 
+Nous allons utiliser la methode buy and hold pour y répondre.
